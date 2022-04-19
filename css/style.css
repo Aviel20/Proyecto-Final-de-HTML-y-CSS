@@ -1,19 +1,15 @@
 *{
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
-.contenedor{
-    width: 100%;
-    max-width: 1759px;
-}
-/*CABECERA*/
+
+/* CABECERA */
 
 header{
     height: 180px;
     background: rgba(0, 41, 115, 1);
 }
-
 header .contenedor{
     height: 100%;
     display: flex;
@@ -23,23 +19,39 @@ header .contenedor{
 header .contenedor .logo{
     width: 33%;
     height: 100%;
+    padding-left: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 header .logo img{
     height: 90%;
+    width: 48%;
+    max-height: 218px;
+    max-width: 218px;
+    min-height: 160px;
+    min-width: 180px;
 }
 header .contenedor .navegacion{
     width: 36%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 header .contenedor .navegacion .menu{
+    display: flex;
+    justify-content: center;
     text-align: center;
-    padding-top: 80px;
 }
 header .contenedor .navegacion .menu a{
     text-decoration: none;
     color: white;
     font-size: 24px;
     padding-right: 25px;
+}
+header .contenedor .navegacion .menu a:nth-child(3){
+    padding-right: 0;
 }
 header .contenedor .navegacion .menu a:hover{
     color: rgb(54, 98,255);
@@ -64,22 +76,26 @@ header .contacto .ubi i{
 header .contacto .ubi i:hover{
     color: rgb(54, 98,255);
 }
-/*Bienvenida*/
+
+/* BIENVENIDA */
+
 .bienvenida{
     width: 100%;
-    height: 680px;
-    background-color: rgba(20, 57, 250, 0.07);
+    height: 720px;
     background-image: url(../img/fondo.jpg);
     background-size: cover;
+    background-color: rgba(20, 57, 250, 0.07);
 }
-.bienvenida > div{
-    width: 850px;
-    height: 360px;
-    padding-left: 194px;
-    padding-top: 199px;
+.bienvenida .contenedor{
+    width: 100%;
+    height: 100%;
+}
+.bienvenida .contenedor > div{
+    padding-left: 10%;
+    padding-top: 10%;
 }
 .bienvenida h2:nth-child(1){
-    width: 540px;
+    width: 516px;
     font-size: 54px;
     color: #ffffff;
     background: rgba(255, 255, 255, 0.35);
@@ -88,9 +104,10 @@ header .contacto .ubi i:hover{
     -moz-border-radius: 14px;
     -ms-border-radius: 14px;
     -o-border-radius: 14px;
+    padding-left: 10px;
 }
 .bienvenida h2:nth-child(2){
-    width: 540px;
+    width: 516px;
     font-size: 54px;
     color: #ffffff;
     background: rgba(255, 255, 255, 0.35);
@@ -99,28 +116,30 @@ header .contacto .ubi i:hover{
     -moz-border-radius: 14px;
     -ms-border-radius: 14px;
     -o-border-radius: 14px;
-}
-.bienvenida h2{
     padding-left: 10px;
 }
 .bienvenida p{
-    width: 100%;
-    padding-top: 34px;
-    padding-left: 10px;;
+    width: 650px;
+    padding-top: 2%;
     font-size: 36px;
     line-height: 44px;
     color: #FFFFFF;
 }
+
 /*Introduccion*/
+
 .intro{
     width: 100%;
-    height: 500px;
+    height: 520px;
     background: rgba(0, 41, 115, 1);
 }
 .intro .contenedor{
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
     align-content: center;
+    align-items: center;
 }
 .intro .contenedor h2{
     padding-top: 15px;
@@ -128,29 +147,16 @@ header .contacto .ubi i:hover{
     color: rgb(96, 159,255);
     font-size: 48px;
 }
-.intro .contenedor p{
-    text-align: center;
-}
 table{
-    width: 100%;
-    height: 200px;
     color: white;
     font-size: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 160px;
 }
-table td:nth-child(1){
-    width: 400px;
-    padding-left: 90px;
-
-}
-table td:nth-child(2){
-    width: 350px;
-    padding-left: 50px;
-}
-table li{
-    padding-top: 20px;
+.intro table li{
+    width: 200px;
+    height: 50px;
 }
 .intro .contenedor .p{
     font-size: 36px;
@@ -163,11 +169,12 @@ table li{
     padding-top: 40px;
     font-size: 24px;
 }
+
 /*CATALOGO*/
 
 .catalogo{
     width: 100%;
-    height: 600px;
+    height: 1100px;
     background: linear-gradient(180deg, #002973 0%, rgba(0, 41, 115, 0.776) 30.21%, rgba(0, 41, 115, 0.44) 59.9%, rgba(0, 41, 115, 0) 100%);
 }
 .catalogo .contenedor{
@@ -176,74 +183,73 @@ table li{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:  space-between;
-    
+    justify-content: space-evenly;
+    align-items: center;
 }
 .catalogo .contenedor .titulo{
     width: 100%;
     height: 80px;
     text-align: center;
     font-size: 30px;
-    margin-top: 8px;
     color: white;
 }
 .catalogo .contenedor .producto{
-    width: 320px;
-    height: 400px;
+    width: 28%;
+    height: 38%;
+    max-width: 451px;
     background-color: white;
+    box-shadow: 5px 5px rgb(221, 213, 213);
+    text-align: center;
+    margin: auto;
     border-radius: 14px;
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;
     -ms-border-radius: 14px;
     -o-border-radius: 14px;
-    box-shadow: 5px 5px rgb(221, 213, 213);
-    text-align: center;
-    margin-right: 50px;
-
+}
+.catalogo .contenedor .producto img{
+    width: 72%;
+    height: 62%;
+    min-width: 28%;
+    min-height: 28%;
 }
 .catalogo h3{
-    color: rgb(37, 71, 134);
+    color: rgb(15, 35, 73);
     font-size: 24px;
 }
 .catalogo p{
     padding-top: 20px;
     color: rgb(32, 47, 75);
-    font-size: 22px;
-}
-.catalogo .contenedor img{
-    width: 300px;
-    padding-left: 50px;
+    font-size: 18px;
+    margin: 0 10%;
 }
 
 /*NOSOTROS*/
+
 .nosotros{
     width: 100%;
     height: 500px;
     background: linear-gradient(180deg, rgba(0, 41, 115, 0) 0%, rgba(0, 41, 115, 0.36) 20.83%, rgba(0, 41, 115, 0.61) 41.67%, rgba(0, 41, 115, 0.822399) 66.67%, #002973 91.15%);
+    margin-top: 60px;
 }
 .nosotros .contenedor{
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-}
-.foto-equipo{
-    width: 45%;
-    height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
-.foto-equipo img{
-    width: 100%;
-    max-width: 700px;
+.nosotros .foto-equipo{
+    width: 45%;
+}
+.nosotros .foto-equipo img{
+    width: 90%;
+    height: 80%;
 }
 .nosotros .conocenos{
-    width: 50%;
-    height: 100%;
-    padding-top: 80px;
-    padding-left: 30px;
+    width: 45%;
 }
 .conocenos h3{
     color: rgb(3, 43, 116);
@@ -264,6 +270,7 @@ table li{
 }
 
 /*FORMULARIO*/
+
 .formulario{
     width: 100%;
     height: 500px;
@@ -278,7 +285,7 @@ table li{
     justify-content: space-around;
 }
 form{
-    padding-top: 24px;
+    margin-right: 5.6%;
 }
 form  p{
     color: white;
@@ -342,6 +349,7 @@ form  textarea::placeholder{
     padding-top: 2px;
     font-size: 19px;
 }
+
 .mapa{
     padding-top: 50px;
     display: flex;;
@@ -355,7 +363,9 @@ form  textarea::placeholder{
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
+
 /*footer*/
+
 footer{
     width: 100%;
     height: 340px;
@@ -381,163 +391,62 @@ footer .dere{
     background: rgb(0, 32, 90);
 }
 
-/*media query*/
+/* MEDIA QUERY */
 
-@media all and (max-width:1680px) {
-    .catalogo{
-        height: 1000px;
+@media all and (max-width:1100px) {
+    header .contenedor .logo img:nth-child(2){
+        visibility: hidden;
     }
-    .producto{
-        margin-bottom: 50px;
+    .nosotros .contenedor .foto-equipo{
+        visibility: hidden;
+        width: 0;
+        height: 0;
     }
-}
-@media all and (max-width:1355px) {
-    header .logo img:nth-child(2){
-        width: 0%;
-    }
-}
-@media all and (max-width:1255px){
-    .catalogo .contenedor .producto{
-        width: 260px;
-        height: 340px;
-    }
-    .catalogo .contenedor img{
-        width: 240px;
-        padding-left: 50px;
-    }
-    .bienvenida > div{
-        padding-left: 80px;
-        padding-top: 199px;
-    }
-}
-@media all and (max-width:1050px){
-    .catalogo .contenedor .producto{
-        width: 240px;
-        height: 320px;
-    }
-    .catalogo .contenedor img{
-        width: 200px;
-        padding-left: 50px;
-    }
-}
-@media all and (max-width:985px){
-    .bienvenida > div{
-        padding-left: 20px;
-        padding-top: 20px;
-    }
-    .bienvenida .contenedor p{
-        font-size: 28px;
-    }
-    .catalogo .contenedor .producto{
-        width: 200px;
-        height: 300px;
-    }
-    .catalogo .contenedor img{
-        width: 180px;
-        padding-left: 50px;
-    }
-}
-@media all and (max-width:1000px) {
-    .bienvenida > div{
-        width: 850px;
-        height: 360px;
-        padding-left: 50px;
-        padding-top: 199px;
-    }
-    .nosotros{
+    
+    .nosotros .contenedor .conocenos{
         width: 100%;
-        height: 400px;
-    }
-    .foto-equipo{
-        width: 0%;
-        height: 0%;
-    }
-    .nosotros .conocenos{
-        width: 60%;
-        height: 100%;
-        padding-top: 0px;
-        padding-left: 0px;
-        justify-content: center;
-        align-items: center;
+        margin: auto;
+        padding-left: 10%;
     }
 }
-@media all and (max-width:882px) {
-    header {
-        height: 120px;
-    }
-    header .contenedor .contacto{
-        width: 0%;
-        height: 0%;
-        visibility: hidden;
-    }
-    header .contenedor .navegacion{
-        width: 80%;
-    }
-    header .contenedor .navegacion .menu{
-        text-align: right;
-        padding-top: 40px;
-    }
-    header .contenedor .logo{
-        width: 20%;
-    }
-    header .contenedor .logo > img{
-        width: 160px;
-    }
-    header .contenedor .logo  img:nth-child(2){
-        visibility: hidden;
-    }
-    header .contacto{
-        width: 0%;
-        height: 0%;
-    }
-    .conocenos{
-        width: 80%;
-    }
-    .catalogo{
-        height: 1400px;
-    }
-    .catalogo .contenedor img{
-        padding: 0;
-        width: 160px;
-    }
-    .catalogo .contenedor{
-        justify-content: space-around;
-    }
-}
-@media all and (max-width:850px) {
-    .bienvenida .contenedor{
-        width: 500px;
-    }
+@media all and (max-width:900px){
+
     .formulario{
-        height: 1000px;
-    }
-    .nosotros{
-        height: 500px;
-    }
-    .nosotros .conocenos{
-        width: 450px;
+        height: 960px;
     }
 }
-@media all and (max-width: 590px) {
-    .bienvenida .contenedor h2{
-        width: 480px;
-        font-size: 48px;
+@media all and (max-width:780px){
+    header .contenedor .contacto{
+        visibility: hidden;
     }
-    .intro .contenedor{
-        align-content: left;
+    header{
+        height: 140px;
     }
-    .intro .contenedor h2{
-        padding-top: 10px;
-        text-align: left;
+
+    header .contenedor .navegacion{
+        width: 67%;
     }
-    .catalogo .contenedor .producto{
-        width: 160px;
-        height: 260px;
+}
+@media all and (max-width:725px){
+    .bienvenida  {
+        height: 520px;
     }
-    .catalogo .contenedor .producto img{
-        width: 140px;
+    /* .bienvenida .contenedor div  h2{
+        width: 80%;
+        font-size: 32px;
+    } */
+    .bienvenida .contenedor .p{
+        width: 80%;
+        font-size: 28px;
+        line-height: 28px;
     }
-    .catalogo .contenedor .producto p{
-        font-size: 18px;
+}   
+@media all and (max-width:600px){
+    .bienvenida .contenedor div  h2{
+        width: 70%;
+        font-size: 36px;
+    }
+    .bienvenida .contenedor .p{
+        font-size: 24px;
     }
 }
