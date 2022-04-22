@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    min-width: 480px;
+}
 
 /* CABECERA */
 
@@ -130,7 +133,7 @@ header .contacto .ubi i:hover{
 
 .intro{
     width: 100%;
-    height: 520px;
+    height: 560px;
     background: rgba(0, 41, 115, 1);
 }
 .intro .contenedor{
@@ -140,6 +143,7 @@ header .contacto .ubi i:hover{
     flex-direction: column;
     align-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .intro .contenedor h2{
     padding-top: 15px;
@@ -156,7 +160,7 @@ table{
 }
 .intro table li{
     width: 200px;
-    height: 50px;
+    height: 60px;
 }
 .intro .contenedor .p{
     font-size: 36px;
@@ -164,7 +168,7 @@ table{
     padding-top: 30px;
     padding-bottom: 20px;
 }
-.intro .contenedor p{
+.intro .contenedor .p1{
     color: white;
     padding-top: 40px;
     font-size: 24px;
@@ -448,5 +452,28 @@ footer .dere{
     }
     .bienvenida .contenedor .p{
         font-size: 24px;
+    }
+    .intro{
+        height: 560px;
+    }
+    .intro .contenedor table{
+        width: 480px;
+        margin-left: 0;
+        display: block;
+        align-items: center;
+        padding-left: 20px;
+    }
+    .intro table li{
+        width: 230px;
+        height: 50px;
+    }
+    .catalogo .contenedor .producto{
+        width: 45%;
+        height: 28%;
+    }
+    .intro .contenedor .p1{
+        font-size: 24px;
+        width: 80%;
+        text-align: center;
     }
 }
