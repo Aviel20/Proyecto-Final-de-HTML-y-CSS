@@ -32,8 +32,8 @@ header .logo img{
     width: 48%;
     max-height: 218px;
     max-width: 218px;
-    min-height: 160px;
-    min-width: 180px;
+    min-height: 120px;
+    min-width: 120px;
 }
 header .contenedor .navegacion{
     width: 36%;
@@ -88,6 +88,7 @@ header .contacto .ubi i:hover{
     background-image: url(../img/fondo.jpg);
     background-size: cover;
     background-color: rgba(20, 57, 250, 0.07);
+    overflow: hidden;
 }
 .bienvenida .contenedor{
     width: 100%;
@@ -133,7 +134,7 @@ header .contacto .ubi i:hover{
 
 .intro{
     width: 100%;
-    height: 560px;
+    height: 580px;
     background: rgba(0, 41, 115, 1);
 }
 .intro .contenedor{
@@ -199,7 +200,7 @@ table{
 }
 .catalogo .contenedor .producto{
     width: 28%;
-    height: 38%;
+    height: 40%;
     max-width: 451px;
     background-color: white;
     box-shadow: 5px 5px rgb(221, 213, 213);
@@ -222,10 +223,11 @@ table{
     font-size: 24px;
 }
 .catalogo p{
-    padding-top: 20px;
+    padding-top: 18px;
     color: rgb(32, 47, 75);
     font-size: 18px;
     margin: 0 10%;
+    overflow: hidden;
 }
 
 /*NOSOTROS*/
@@ -446,6 +448,10 @@ footer .dere{
     }
 }   
 @media all and (max-width:600px){
+    header .contenedor .logo img{
+        width: 120px;
+        height: 120px;
+    }
     .bienvenida .contenedor div  h2{
         width: 70%;
         font-size: 36px;
